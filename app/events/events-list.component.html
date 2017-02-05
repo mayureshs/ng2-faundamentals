@@ -1,0 +1,9 @@
+<div>
+    <h1>Upcoming ng Events</h1>
+    <hr />
+    <event-thumbnail #thumbnail (eventClick)="handleEventClicked($event)" *ngFor="let ngevent of events" [event]="ngevent">
+    </event-thumbnail>
+    <h4 class="hide">{{thumbnail.someProperty}}</h4>
+    <button class="btn btn-primary hide" (click)="thumbnail.logFoo()">log some foo
+    </button>
+</div>
